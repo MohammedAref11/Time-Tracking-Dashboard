@@ -36,7 +36,6 @@ ul, li {
     font-family: "Rubik-Variable";
     src: url("./fonts/Rubik-VariableFont_wght.woff2") format('woff2');
     font-display: swap;
-    font-weight: 300 500;
     font-style: normal;
 }
 
@@ -62,6 +61,149 @@ ul, li {
 
 body { 
     font-family: "Rubik-Variable", Arial, Helvetica, system-ui, -apple-system;
+    background-color: var(--Navy-950);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
+
+.dashboard-container { 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.dashboard__profile-contianer { 
+  background-color: var(--Navy-900);
+  border-radius: 1rem;
+}
+
+.card-profile { 
+  background-color: var(--Purple-600);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem;
+  border-radius: 1rem;
+}
+
+.card-profile img { 
+  width: 70px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+
+
+.card-profile-for { 
+  color: var(--Navy-200);
+}
+
+.card-profile__name { 
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 1.6rem;
+}
+
+.switch-info-btns { 
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.info__btns { 
+  border: none;
+  background-color: var(--Navy-900);
+  color: var(--Navy-200);
+  font-weight: 300;
+}
+
+.card-work {     
+    background-color: var(--Orange-300-work);
+    background-image: url(./images/icon-work.svg);
+
+}
+
+.card-play { 
+  background-color: var(--Blue-300-play);
+  background-image: url(./images/icon-play.svg);
+}
+
+.card-study { 
+  background-color: var(--Pink-400-study);
+  background-image: url(./images/icon-study.svg);
+}
+
+.card-exercise { 
+  background-color: var(--Green-400-exercise);
+  background-image: url(./images/icon-exercise.svg);
+}
+.card-social { 
+  background-color: var(--Yellow-300-self-care);
+  background-image: url(./images/icon-self-care.svg);
+}
+.card-self-care { 
+  background-color: var(--Purple-700-social);
+  background-image: url(./images/icon-social.svg);
+}
+
+.dashboard__card { 
+  padding-top: 2.5rem;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-position: 85% 0%;
+}
+
+.dashboard__card-info { 
+  background-color: var(--Navy-900);
+  padding: 2.5rem 1rem; 
+  border-radius: 1rem;
+}
+
+.dashboard__card--text-main, .dashboard__card--text--sub { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.dashboard__card--title { 
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.850rem;
+  margin-bottom: .5rem;
+}
+
+.dashboard__card--hours { 
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.dashboard__card--previous { 
+  color: var(--Navy-200);
+}
+
+
+
+
+
+
+
+/* Tablets */
+
+
+
+
+
+
+
+
+/* Mobile */
+
+
+
+
 
 
