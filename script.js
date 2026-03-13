@@ -1,10 +1,9 @@
-// Get the Elments from the document
-// Change Status buttons elements
+// buttons Elements
 const dailyBtn = document.getElementById("dailyBtn");
 const weeklyBtn =  document.getElementById("weeklyBtn");
 const monthlyBtn = document.getElementById("monthlyBtn");
 
-// Card elements
+// Cards elements
 const current = document.querySelectorAll(".dashboard__card--hours");
 const prev = document.querySelectorAll(".dashboard__card--previous");
 
