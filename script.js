@@ -1,22 +1,67 @@
 // Get the Elments from the document
+// Change Status buttons elements
+const dailyBtn = document.getElementById("dailyBtn");
+const weeklyBtn =  document.getElementById("weeklyBtn");
+const monthlyBtn = document.getElementById("monthlyBtn");
 
-
-
-// Fetch data from json file
+// Card elements
+const current = document.querySelectorAll(".dashboard__card--hours");
+const prev = document.querySelectorAll(".dashboard__card--previous");
 
 fetch("./data.json").then((response) => { 
-    if(!response)
-        return console.log("There is no data");
+    if(!response.ok) { 
+        return console.log("There is no data")
+    }
 
-    return response.json();
-}).then((data) => { 
-   
+    return response.json()
+
+}).then((el) => { 
+
+    current.forEach((item, index) => { 
+            item.textContent = `${el[index].timeframes.weekly.current}hrs`;
+        })
+    prev.forEach((item, index) => { 
+            item.textContent = `Last week - ${el[index].timeframes.weekly.previous}hrs`;
+        })
+
+   dailyBtn.addEventListener('click', () => { 
+        current.forEach((item, index) => { 
+            item.textContent = `${el[index].timeframes.daily.current}hrs`;
+        })
+        prev.forEach((item, index) => { 
+            item.textContent = `Yesterday - ${el[index].timeframes.daily.previous}hrs`;
+        })
+   })
+
+   weeklyBtn.addEventListener('click', () => { 
+        current.forEach((item, index) => { 
+            item.textContent = `${el[index].timeframes.weekly.current}hrs`;
+        })
+        prev.forEach((item, index) => { 
+            item.textContent = `Last week - ${el[index].timeframes.weekly.previous}hrs`;
+        })
+   })
+
+   monthlyBtn.addEventListener('click', () => { 
+        current.forEach((item, index) => { 
+            item.textContent = `${el[index].timeframes.monthly.current}hrs`;
+        })
+        prev.forEach((item, index) => { 
+            item.textContent = `Last month - ${el[index].timeframes.monthly.previous}hrs`;
+        })
+   })
 })
 
 
-function DisplayDaily() { 
 
-}
+
+
+
+
+
+
+
+ 
 
 
 
