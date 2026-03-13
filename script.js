@@ -17,13 +17,14 @@ fetch("./data.json").then((response) => {
 
 }).then((el) => { 
 
+    // Display weekly data as default 
     current.forEach((item, index) => { 
             item.textContent = `${el[index].timeframes.weekly.current}hrs`;
         })
     prev.forEach((item, index) => { 
             item.textContent = `Last week - ${el[index].timeframes.weekly.previous}hrs`;
         })
-
+    // Display daily data when daily button is clicked
    dailyBtn.addEventListener('click', () => { 
         current.forEach((item, index) => { 
             item.textContent = `${el[index].timeframes.daily.current}hrs`;
@@ -32,7 +33,7 @@ fetch("./data.json").then((response) => {
             item.textContent = `Yesterday - ${el[index].timeframes.daily.previous}hrs`;
         })
    })
-
+    // Display weekly data when weekly button is clicked
    weeklyBtn.addEventListener('click', () => { 
         current.forEach((item, index) => { 
             item.textContent = `${el[index].timeframes.weekly.current}hrs`;
@@ -41,7 +42,7 @@ fetch("./data.json").then((response) => {
             item.textContent = `Last week - ${el[index].timeframes.weekly.previous}hrs`;
         })
    })
-
+    // Display monthly data when monthly button is clicked
    monthlyBtn.addEventListener('click', () => { 
         current.forEach((item, index) => { 
             item.textContent = `${el[index].timeframes.monthly.current}hrs`;
