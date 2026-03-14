@@ -6,6 +6,8 @@ One of the challenges i faced was how i will display the data without making my 
 
 Here is a little example how i did it.
 
+Live Site [Click Here](https://mohammedaref11.github.io/Time-Tracking-Dashboard/)
+
 ```js 
 fetch("./data.json").then((response) => { 
     if(!response.ok) { 
